@@ -6,10 +6,8 @@ import {
   HeaderContent,
   Segment,
   Label,
-  Input,
   Form,
-  Button,
-  Message,
+  Button
 } from "semantic-ui-react";
 import { MessageComponent } from "./MessageComponent";
 

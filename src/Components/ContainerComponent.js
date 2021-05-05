@@ -23,7 +23,9 @@ const ContainerComponent = () => {
     const response = await fetch(
       "https://app-5649ac0f-d91f-42a9-9ef2-413ba2e49158.cleverapps.io/submitDetails",
       {
-        method: "POST", // or 'PUT'
+        method: "POST",
+        mode: "cors",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",

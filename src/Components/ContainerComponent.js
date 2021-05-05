@@ -21,7 +21,7 @@ const ContainerComponent = () => {
     console.log("pincode " + pincode);
     const data = { mobile: mobileNo, pincode: pincode };
     const response = await fetch(
-      "http://app-5649ac0f-d91f-42a9-9ef2-413ba2e49158.cleverapps.io/submitDetails",
+      "https://app-5649ac0f-d91f-42a9-9ef2-413ba2e49158.cleverapps.io/submitDetails",
       {
         method: "POST", // or 'PUT'
         headers: {

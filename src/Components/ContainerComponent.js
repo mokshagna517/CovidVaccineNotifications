@@ -7,7 +7,7 @@ import {
   Segment,
   Label,
   Form,
-  Button
+  Button,
 } from "semantic-ui-react";
 import { MessageComponent } from "./MessageComponent";
 
@@ -16,9 +16,22 @@ const ContainerComponent = () => {
   const [pincode, setPincode] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const submitDetails = () => {
+  const submitDetails = async () => {
     console.log("Mobile No: " + mobileNo);
     console.log("pincode " + pincode);
+    const data = { mobile: mobileNo, pincode: pincode };
+    const response = await fetch(
+      "http://app-5649ac0f-d91f-42a9-9ef2-413ba2e49158.cleverapps.io/submitDetails",
+      {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    const responseJson = await response.json();
+    console.log(responseJson);
     setSubmitted(true);
   };
   return (

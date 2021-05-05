@@ -25,7 +25,6 @@ const ContainerComponent = () => {
       {
         method: "POST",
         mode: "cors",
-        credentials: "include",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",

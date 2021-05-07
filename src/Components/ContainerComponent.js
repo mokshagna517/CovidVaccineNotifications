@@ -21,7 +21,7 @@ const ContainerComponent = () => {
     console.log("pincode " + pincode);
     const data = { mobile: mobileNo, pincode: pincode };
     const response = await fetch(
-      "https://12b99ce88810.ngrok.io/submitDetails",
+      "https://covidvaccinenotifier.herokuapp.com/submitDetails",
       {
         method: "POST",
         mode: "cors",

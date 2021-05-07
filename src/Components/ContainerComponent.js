@@ -21,7 +21,7 @@ const ContainerComponent = () => {
     console.log("pincode " + pincode);
     const data = { mobile: mobileNo, pincode: pincode };
     const response = await fetch(
-      "https://dafd6c8fec3b.ngrok.io/submitDetails",
+      "https://d24104f24111.ngrok.io/submitDetails",
       {
         method: "POST",
         mode: "cors",
